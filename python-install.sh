@@ -17,7 +17,7 @@ VERSION_MAJOR=$(echo $1 | cut -d"." -f1)
 VERSION_MINOR=$(echo $1 | cut -d"." -f2)
 VERSION_BUILD=$(echo $1 | cut -d"." -f3)
 
-OUTPUT=/opt/python/$VERSION
+OUTPUT=/opt/python/$VERSION_MAJOR.$VERSION_MINOR
 TMP=/tmp/python-install-$VERSION
 trap 'rm -rf -- "$TMP"' EXIT  # Delete temp directory if any command fails
 
